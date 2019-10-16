@@ -26,7 +26,7 @@ function App() {
 
 
 		<div className="App">
-			<Navigation cart={cart}/>
+			<Navigation />
 
 			{/* Routes */}
 			<Route
@@ -34,8 +34,8 @@ function App() {
 				path="/"
 				component={Products}
 				/>
-				)}
-			/>
+				
+			
 
 			<Route
 				path="/cart"
