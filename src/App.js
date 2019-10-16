@@ -19,7 +19,7 @@ function App() {
 	};
 
 	return (
-<ProductContext.Provider value={user}>
+<ProductContext.Provider value={{products, addItem}}>
 		
 
 
@@ -30,11 +30,8 @@ function App() {
 			<Route
 				exact
 				path="/"
-				render={() => (
-					<Products
-						products={products}
-						addItem={addItem}
-					/>
+				component={Products}
+				/>
 				)}
 			/>
 
