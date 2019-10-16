@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
+import {ProductContext} from './contexts/ProductContext'
 
 // Components
 import Navigation from './components/Navigation';
@@ -18,6 +19,10 @@ function App() {
 	};
 
 	return (
+<ProductContext.Provider value={user}>
+		
+
+
 		<div className="App">
 			<Navigation cart={cart} />
 
@@ -38,6 +43,7 @@ function App() {
 				render={() => <ShoppingCart cart={cart} />}
 			/>
 		</div>
+		</ProductContext.Provider>
 	);
 }
 
